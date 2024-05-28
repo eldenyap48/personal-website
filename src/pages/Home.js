@@ -63,7 +63,7 @@ const Home = () => {
         <motion.article className="flex-1 flex flex-col items-center justify-center" initial="begin" animate="end" variants={loadingVariants} exit={{ opacity: 0, transition: { duration: 0.5 } }}>
 
             {/* Image, Title and Introduction */}
-            <div className='flex gap-20 ml-20 mr-20 mb-20 items-center justify-center w-full' >
+            <div className='flex flex-row gap-20 ml-20 mr-20 mb-20 items-center justify-center w-full' >
                 <motion.img animate={{ transition: {duration: 2} }} className="w-64 h-64 object-cover rounded-full shadow-lg border-2 border-black" src={ProfilePic}/>
 
                 <motion.div className="pb-5">

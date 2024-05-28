@@ -41,11 +41,6 @@ const Project = ({ name, numPhotos, technologies, descriptions, header, link }) 
         techIcons.push(techIcon);
     }
 
-    var hasLink = true;
-    if (link === "") {
-        hasLink = false;
-    }
-
     const [[page, direction], setPageDirection] = useState([0, 0]);
 
     const paginate = newDirection => {
@@ -63,7 +58,7 @@ const Project = ({ name, numPhotos, technologies, descriptions, header, link }) 
 
     return (
         <motion.div className="relative overflow-hidden" whileHover={{ scale: 1.05 }}>
-            { hasLink ? <motion.a href={ link } className='absolute font-bold -right-14 top-8 text-sm p-1 bg-teal text-white text-center w-48 transform rotate-45 origin-center'>External Link</motion.a> : null}
+            { link != "" ? <motion.a href={ link } className='absolute font-bold -right-14 top-8 text-sm p-1 bg-teal text-white text-center w-48 transform rotate-45 origin-center'>External Link</motion.a> : null}
 
             <motion.div className="flex flex-row gap-5 p-3 my-5" initial="hidden" animate="visible">
 
